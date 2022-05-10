@@ -19,7 +19,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 var max = 3;
-const playerSelection = "rock";
+var tempPlayerSelection = prompt("What's your weapon, Rock, Paper or Scissors?"); 
+const playerSelection = tempPlayerSelection.charAt(0).toUpperCase() + tempPlayerSelection.slice(1).toLowerCase(); // string case insensitive
 const computerSelection = computerPlay();
 
 console.log(computerSelection);
