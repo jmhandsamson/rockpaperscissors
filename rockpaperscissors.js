@@ -15,7 +15,37 @@ function computerPlay() {
 // selection of a winner
 // return input from user and random pick from computer
 function playRound(playerSelection, computerSelection) {
-    return "You Lose! " + playerSelection + " beats " + computerSelection;
+    // comparing if you win or lose!
+    // rock ifelse
+    if (playerSelection == "Rock" && computerSelection == "Paper") {
+        return "You Lose! " + computerSelection + " beats " + playerSelection;
+    }
+    else if (playerSelection == "Rock" && computerSelection == "Scissors") {
+        return "You Win! " + playerSelection + " beats " + computerSelection;
+    }
+    else if (playerSelection == "Rock" && computerSelection == "Rock") {
+        return "It's a tie! " + playerSelection + " is same as " + computerSelection;
+    }
+    // paper ifelse
+    else if (playerSelection == "Paper" && computerSelection == "Scissors") {
+        return "You Lose! " + computerSelection + " beats " + playerSelection;
+    }
+    else if (playerSelection == "Paper" && computerSelection == "Rock") {
+        return "You Win! " + playerSelection + " beats " + computerSelection;
+    }
+    else if (playerSelection == "Paper" && computerSelection == "Paper") {
+        return "It's a tie! " + playerSelection + " is same as " + computerSelection;
+    }
+    // scissors ifelse
+    else if (playerSelection == "Scissors" && computerSelection == "Rock") {
+        return "You Lose! " + computerSelection + " beats " + playerSelection;
+    }
+    else if (playerSelection == "Scissors" && computerSelection == "Paper") {
+        return "You Win! " + playerSelection + " beats " + computerSelection;
+    }
+    else {
+        return "It's a tie! " + playerSelection + " is same as " + computerSelection;
+    }
 }
 // main program is here and looping it 5 times
 function game(rounds) {
@@ -29,5 +59,6 @@ function game(rounds) {
     }
 }
 
+var counter = 0; // for scores
 var max = 3;
 game(5);
