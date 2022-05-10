@@ -17,12 +17,17 @@ function computerPlay() {
 function playRound(playerSelection, computerSelection) {
     return "You Lose! " + playerSelection + " beats " + computerSelection;
 }
+// main program is here and looping it 5 times
+function game(rounds) {
+    for (let i = 0; i < rounds; i++) {
+        var tempPlayerSelection = prompt("What's your weapon, Rock, Paper or Scissors?"); // input from user
+        const playerSelection = tempPlayerSelection.charAt(0).toUpperCase() + tempPlayerSelection.slice(1).toLowerCase(); // string case insensitive
+        const computerSelection = computerPlay();
+        playRound();
+        //console.log(computerSelection);
+        console.log(playRound(playerSelection, computerSelection)); //print return game winner
+    }
+}
 
 var max = 3;
-var tempPlayerSelection = prompt("What's your weapon, Rock, Paper or Scissors?"); 
-const playerSelection = tempPlayerSelection.charAt(0).toUpperCase() + tempPlayerSelection.slice(1).toLowerCase(); // string case insensitive
-const computerSelection = computerPlay();
-
-console.log(computerSelection);
-//print return game winner
-console.log(playRound(playerSelection, computerSelection));
+game(5);
