@@ -79,21 +79,19 @@ function game(rounds) {
         else if (playerSelection == "Scissors" && computerSelection == "Paper") {
             counterComputer++;
         }
-        console.log(counterPlayer + " " + counterComputer); // printing
+        console.log(counterPlayer + " " + counterComputer); // printing scores
+    }
+    // prints who won
+    if (counterPlayer > counterComputer) {
+        console.log("YOU WON");
+    }
+    else if (counterComputer == counterPlayer) {
+        console.log("TIE");
+    }
+    else {
+        console.log("YOU LOST!");
     }
 }
 
-//var counterComputer = 0; // score for computer
-//var counterPlayer = 0; // score for user
 var max = 3;
-
 game(5); // main game
-//console.log(counterComputer + "COMP");
-//console.log(counterPlayer);
-// who won?
-/*if(counterPlayer > counterPlayer) {
-    console.log("You win!");
-}
-else {
-    console.log("You Lose!")
-}*/
